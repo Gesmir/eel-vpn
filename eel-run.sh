@@ -15,7 +15,7 @@ cd ./$ovpnfolder/
 if [[ $# -eq 0 ]]; then
 	vpn=$(python pick-random-vpn.py)
 
-	openvpn --config $vpn --auth-user-pass pass --daemon myvpn
+	openvpn --config $vpn --auth-user-pass pass --daemon eel-vpn
 	echo "openvpn is running with configfile:" $vpn
 	exit 0
 fi
@@ -24,7 +24,7 @@ fi
 if [[ $1 == "start" ]]; then
 	vpn=$(python pick-random-vpn.py)
 
-	openvpn --config $vpn --auth-user-pass pass --daemon myvpn
+	openvpn --config $vpn --auth-user-pass pass --daemon eel-vpn
 	echo "openvpn is running with configfile:" $vpn
 	exit 0
 fi
@@ -48,6 +48,6 @@ if [[ $vpn == "1" ]]; then
 	exit 1
 fi
 
-openvpn --config $vpn --auth-user-pass pass --deamon myvpn
+openvpn --config $vpn --auth-user-pass pass --daemon eel-vpn
 echo "openvpn is running with configfile:" $vpn
 exit 0
