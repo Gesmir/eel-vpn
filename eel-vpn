@@ -1,0 +1,39 @@
+#!/bin/sh
+
+cd //opt/vpn/
+
+if [[ $# -eq 0 ]]; then
+	sh eel-run.sh
+
+elif [[ $# -eq 1 ]]; then
+	if [[ $1 == "--help" ]]; then
+		echo "pick random vpn:"
+		echo "sudo myvpn start"
+		echo ""
+		echo "pick random vpn every 30 minutes: (s=secounds; m=minutes; h=hours; d=days)"
+		echo "sudo myvpn start 30m"
+		echo ""
+		echo "use .ovpn with searchstring"
+		echo "sudo myvpn us"
+		echo "sudo myvpn us 1h"
+		echo ""
+		echo "stop vpn:"
+		echo "sudo myvpn stop"
+		exit
+
+	else
+		sh myvpn.sh $1
+	fi	
+
+elif [[ $# -eq 2 ]]; then
+	if [[ $2 =~ "[0123456789]+[mdhd]+?" ]]; then
+		while true; do
+			sh eel-run.sh $1
+			sleep $2
+		done
+
+	else
+		echo $2 "is not a valid time"
+		echo "use 'myvpn --help' for more information"
+	fi
+fi
