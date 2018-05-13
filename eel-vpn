@@ -26,7 +26,7 @@ elif [[ $# -eq 1 ]]; then
 	fi	
 
 elif [[ $# -eq 2 ]]; then
-	if [[ $2 =~ "[0123456789]+[mdhd]+?" ]]; then
+	if [[ $2 =~ "[0123456789]+[mdhs]+?" ]]; then
 		while true; do
 			cd //opt/eel-vpn/
 			sh eel-run.sh $1
