@@ -20,15 +20,15 @@ small bash & python script for switching, random picking, random picking after x
 
 `sudo eel-vpn foo 1h` <- select a random ovpn file which contains 'foo' every hour
 
-**valid time:**
+**valid times:**
 
-'120s' 	<- 120 secounds
+`120s` 	<- 120 secounds
 
-'78m' 	<- 78 minutes
+`78m` 	<- 78 minutes
 
-'12h'	<- 12 hours
+`12h`	<- 12 hours
 
-'1d'	<- every day
+`1d`	<- every day
 
 ### Dependencies
 - python
