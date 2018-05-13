@@ -1,8 +1,7 @@
 #!/bin/sh
 
-cd //opt/eel-vpn/
-
 if [[ $# -eq 0 ]]; then
+	cd //opt/eel-vpn/
 	sh eel-run.sh
 
 elif [[ $# -eq 1 ]]; then
@@ -22,12 +21,14 @@ elif [[ $# -eq 1 ]]; then
 		exit
 
 	else
+		cd //opt/eel-vpn/
 		sh myvpn.sh $1
 	fi	
 
 elif [[ $# -eq 2 ]]; then
 	if [[ $2 =~ "[0123456789]+[mdhd]+?" ]]; then
 		while true; do
+			cd //opt/eel-vpn/
 			sh eel-run.sh $1
 			sleep $2
 		done
