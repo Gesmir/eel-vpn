@@ -22,7 +22,7 @@ elif [[ $# -eq 1 ]]; then
 
 	else
 		cd //opt/eel-vpn/
-		sh myvpn.sh $1
+		sh eel-run.sh $1
 	fi	
 
 elif [[ $# -eq 2 ]]; then
