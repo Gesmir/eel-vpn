@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd //opt/vpn/
+cd //opt/eel-vpn/
 
 if [[ $# -eq 0 ]]; then
 	sh eel-run.sh
