@@ -1,3 +1,5 @@
+#!/bin/sh
+
 if [ "$EUID" -ne 0 ]; then
 	echo "run this script as root"
 fi
