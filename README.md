@@ -5,7 +5,7 @@ small bash & python script for switching, random picking, random picking after x
 1. place your ovpn config files in the `./ovpn-data/` directory
 2. place your certificat in `./ovpn-data/`
 3. edit `./ovpn-data/pass`, if you don't want to enter your login everytime
-4. `sudo wizard.sh`
+4. `sudo sh wizard.sh`
 
 ## Usage
 `eel-vpn --help`
