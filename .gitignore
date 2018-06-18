@@ -1,2 +1,4 @@
 ./legacy/*
 ./__pycache__/*
+./ovpn-data/*.ovpn
+./ovpn-data/ca*
