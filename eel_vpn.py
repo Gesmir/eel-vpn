@@ -41,7 +41,7 @@ args = parser.parse_args()
 def killall_ovpn():
     pid_list = []
     try:
-        pid_list = get_pid("eel_vpn")
+        pid_list = get_pid("openvpn")
     except CalledProcessError:
         return
     for pid in pid_list:
