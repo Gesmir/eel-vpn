@@ -8,7 +8,7 @@
 # Licence:      CC BY-SA 3.0 DE
 
 from sys import exit
-from subprocess import call, check_output
+from subprocess import call, check_output, CalledProcessError
 from os import chdir, listdir, geteuid, getcwd, kill
 from re import search
 from random import choice
