@@ -8,13 +8,13 @@
 # Licence:      CC BY-SA 3.0 DE
 
 from sys import exit
-from subprocess import call, check_output, CalledProcessError
+from subprocess import call, check_call
 from os import chdir, listdir, geteuid, getcwd, kill
 from re import search
 from random import choice
 from argparse import ArgumentParser
 from time import sleep
-
+import signal
 
 parser = ArgumentParser()
 parser.add_argument("-c", "--choose",
@@ -39,20 +39,10 @@ args = parser.parse_args()
 
 
 def killall_ovpn():
-    pid_list = []
     try:
-        pid_list = get_pid("openvpn")
-    except CalledProcessError:
+        check_call(["killall", "-q", "eel-vpn", "openvpn"])
+    except:
         return
-    for pid in pid_list:
-        try:
-            kill(pid, 0)
-        except OSError:
-            continue
-
-
-def get_pid(process_name):
-    return map(int, check_output(check_output(["pidof", process_name])).split())
 
 
 def exit_when_list_is_empty(ovpn_list):
