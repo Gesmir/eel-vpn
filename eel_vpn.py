@@ -40,7 +40,7 @@ args = parser.parse_args()
 
 def killall_ovpn():
     try:
-        check_call(["killall", "-q", "eel-vpn", "openvpn"])
+        check_call(["killall", "-q", "eel_vpn", "openvpn"])
     except:
         return
 
@@ -98,11 +98,11 @@ def get_ovpn_file():
 
 
 # script starts here
+exit_if_not_root()
+
 if args.stop is True:
     killall_ovpn()
     exit(0)
-
-exit_if_not_root()
 
 if args.time is not None:
     print("Stop program with Ctrl+C")
