@@ -2,8 +2,6 @@
 
 small  python script for switching, random picking, random picking after x time of a vpn via openvpn. The python script works without the other files.
 
-
-
 ## Usage
 
 You can either use eel_vpn.py as a standalone script or as a bash command.

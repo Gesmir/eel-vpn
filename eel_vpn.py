@@ -8,8 +8,8 @@
 # Licence:      CC BY-SA 3.0 DE
 
 from sys import exit
-from subprocess import call
-from os import chdir, listdir, geteuid, getcwd
+from subprocess import call, check_output
+from os import chdir, listdir, geteuid, getcwd, kill
 from re import search
 from random import choice
 from argparse import ArgumentParser
@@ -39,7 +39,20 @@ args = parser.parse_args()
 
 
 def killall_ovpn():
-    call(["killall", "-q", "eel-vpn", "openvpn"])
+    pid_list = []
+    try:
+        pid_list = get_pid("eel_vpn")
+    except CalledProcessError:
+        return
+    for pid in pid_list:
+        try:
+            kill(pid, 0)
+        except OSError:
+            continue
+
+
+def get_pid(process_name):
+    return map(int, check_output(check_output(["pidof", name])).split())
 
 
 def exit_when_list_is_empty(ovpn_list):
