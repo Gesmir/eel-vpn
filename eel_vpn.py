@@ -52,7 +52,7 @@ def killall_ovpn():
 
 
 def get_pid(process_name):
-    return map(int, check_output(check_output(["pidof", name])).split())
+    return map(int, check_output(check_output(["pidof", process_name])).split())
 
 
 def exit_when_list_is_empty(ovpn_list):
