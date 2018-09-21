@@ -40,7 +40,8 @@ args = parser.parse_args()
 
 def killall_ovpn():
     try:
-        check_call(["killall", "-q", "eel_vpn", "openvpn"])
+        check_call(["killall", "-q", "openvpn"])
+        check_call(["wait", "openvpn", "2>/dev/null"])
     except:
         return
 
@@ -78,8 +79,7 @@ def ovpn_exec(ovpn_file):
           ovpn_file,
           "--auth-user-pass",
           args.pass_loc,
-          "--daemon",
-          "eel-vpn"])
+          "--daemon"])
 
 
 def exit_if_not_root():
