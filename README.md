@@ -8,7 +8,7 @@ You can either use eel_vpn.py as a standalone script or as a bash command.
 
 ### 1. Standalone script
 
-example: __Certificat,__ __ovpn config__  'my-vpn-config.ovpn' & __pass__ placed in ''/etc/openvpn/server'
+example: __Certificat,__ __ovpn config__  'myvpn-config.ovpn' & __pass__ placed in ''/etc/openvpn/server'
 
 ```bash
 eel_vpn.py -c myvpn -l /etc/openvpn/server -p /etc/openvpn/server/pass
@@ -18,7 +18,7 @@ eel_vpn.py -c myvpn -l /etc/openvpn/server -p /etc/openvpn/server/pass
 
 ### 2. Bash command 
 
-When you run the wizard ``` sudo sh wizard.sh``` , you can call eel_vpn anywhere. The Program now lies in ```//opt/eel_vpn/```. You can put your ovpn files, cetificat and pass in ```//opt/eel_vpn/ovpn-data/```. **Please make sure that you change the premisions of your pass file to -rwe------ (700)**. The wizard will do it for the dummy file ```/ovpn-data/pass``` .
+When you run the wizard ``` sudo sh wizard.sh``` , you can call eel_vpn anywhere. The Program now lies in ```//opt/eel_vpn/```. You can put your ovpn files, cetificat and pass in ```//opt/eel_vpn/ovpn-data/```. **Please make sure that you change the premisions of your pass file to -rwx------ (700)**. The wizard will do it for the dummy file ```/ovpn-data/pass``` .
 
 **TLDR**:
 
