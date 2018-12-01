@@ -8,24 +8,24 @@ You can either use eel_vpn.py as a standalone script or as a bash command.
 
 ### 1. Standalone script
 
-example: __Certificat,__ __ovpn config__  'myvpn-config.ovpn' & __pass__ placed in ''/etc/openvpn/server'
+The certificate must be in the same folder of the [location of .ovpn file]
 
 ```bash
-sudo eel_vpn.py -c myvpn -l /etc/openvpn/server -p /etc/openvpn/server/pass
+$ sudo eel_vpn.py -c [searchphrase] -l [location of .ovpn file] -p [location of the pass file]
 ```
 
 
 
 ### 2. Bash command 
 
-When you run the wizard ``` sudo sh wizard.sh``` , you can call eel_vpn anywhere. The Program now lies in ```//opt/eel_vpn/```. You can put your ovpn files, cetificat and pass in ```//opt/eel_vpn/ovpn-data/```. **Please make sure that you change the premisions of your pass file to -rwx------ (700)**. The wizard will do it for the dummy file ```/ovpn-data/pass``` .
+When you run the wizard ```$ sudo sh wizard.sh``` , you can call eel_vpn anywhere. The Program now lies in ```/opt/eel_vpn/```. You can put your ovpn files, cetificat and pass in ```/opt/eel_vpn/ovpn-data/```. **Please make sure that you change the premisions of your pass file to -rwx------ (700)**. The wizard will do it for the dummy file ```/ovpn-data/pass``` .
 
 **TLDR**:
 
-1. Change the pass file with your pass file ```eel_vpn/ovpn-data/pass```.
-2. Put .ovpn files in ```eel_vpn/ovpn-data/``` 
-3. run the wizzard ```sudo sh wizard.sh```
-4. you can now call the script anywhere ```sudo eel_vpn``` (pick a random ovpn config file)
+1. run the wizzard ```$ sudo sh wizard.sh```
+2. Change the pass file with your pass file ```/opt/eel_vpn/ovpn-data/pass```.
+3. Put .ovpn files in ```/opt/eel_vpn/ovpn-data/``` 
+4. you can now call the script anywhere ```$ sudo eel_vpn``` (pick a random ovpn config file)
 
 
 
