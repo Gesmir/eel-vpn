@@ -11,7 +11,7 @@ You can either use eel_vpn.py as a standalone script or as a bash command.
 example: __Certificat,__ __ovpn config__  'myvpn-config.ovpn' & __pass__ placed in ''/etc/openvpn/server'
 
 ```bash
-eel_vpn.py -c myvpn -l /etc/openvpn/server -p /etc/openvpn/server/pass
+sudo eel_vpn.py -c myvpn -l /etc/openvpn/server -p /etc/openvpn/server/pass
 ```
 
 
