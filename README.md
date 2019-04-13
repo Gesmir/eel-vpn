@@ -35,8 +35,8 @@ When you run the wizard ```$ sudo sh wizard.sh``` , you can call eel_vpn anywher
 | ---------------- | ------------------------------------------------------------ |
 | -h, --help       | shows help message, see below                                |
 | -c, --choose     | Choose a random ovpn file which contains the string parsed as argument.<br />Default value will pick any ovpn file. |
-| -l, --folder_loc | Location folder which contains the ovpn files, default is './ovpn-data/' |
-| -p, --pass_loc   | Location of the pass file, default is './ovpn-data/pass'     |
+| -l, --folder_loc | Location folder which contains the ovpn files, default is '/opt/eel_vpn/ovpn-data/' |
+| -p, --pass_loc   | Location of the pass file, default is '/opt/eel_vpn/ovpn-data/pass'     |
 | -t, --time       | Changes config every 'argument passed' amount of seconds.    |
 | -s, --stop       | kill all openvpn                                             |
 
